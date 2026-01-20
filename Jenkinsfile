@@ -1,10 +1,11 @@
 pipeline {
   agent any
 
-  // Choose ONE trigger:
-  // triggers { cron('H 2 * * *') }           // nightly at ~2am
-  triggers { githubPush() }                  // build on GitHub webhook push
 
+triggers {
+  githubPush()
+  cron('H 2 * * *')
+}               
   environment {
     IMAGE     = "adult-model"
     CONT      = "model"
