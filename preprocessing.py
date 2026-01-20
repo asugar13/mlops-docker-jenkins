@@ -11,7 +11,7 @@ raw_data_path = os.path.join(RAW_DATA_DIR, RAW_DATA_FILE)
 df = pd.read_csv(raw_data_path, sep=",")
 
 
-print('test ci again once more')
+print('test ci again once more twice')
 # Income to binary
 df['income'].replace(['<=50K','>50K'],[0,1], inplace=True) 
 
